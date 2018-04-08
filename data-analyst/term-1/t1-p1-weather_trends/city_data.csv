@@ -1,0 +1,343 @@
+year,city,avg_temp
+1900,London,9.73
+1901,London,9.20
+1902,London,8.95
+1903,London,9.45
+1904,London,9.18
+1905,London,9.25
+1906,London,9.62
+1907,London,9.03
+1908,London,9.31
+1909,London,8.70
+1910,London,9.39
+1911,London,10.22
+1912,London,9.57
+1913,London,9.89
+1914,London,9.98
+1915,London,9.07
+1916,London,9.28
+1917,London,8.65
+1918,London,9.60
+1919,London,8.48
+1920,London,9.67
+1921,London,10.60
+1922,London,8.81
+1923,London,9.17
+1924,London,9.34
+1925,London,9.31
+1926,London,9.83
+1927,London,9.25
+1928,London,9.69
+1929,London,9.09
+1930,London,9.70
+1931,London,9.12
+1932,London,9.57
+1933,London,9.96
+1934,London,10.11
+1935,London,9.90
+1936,London,9.43
+1937,London,9.69
+1938,London,10.18
+1939,London,9.77
+1940,London,9.06
+1941,London,9.09
+1942,London,9.10
+1943,London,10.19
+1944,London,9.62
+1945,London,10.39
+1946,London,9.58
+1947,London,9.75
+1948,London,10.16
+1949,London,10.63
+1950,London,9.75
+1951,London,9.52
+1952,London,9.35
+1953,London,9.95
+1954,London,9.35
+1955,London,9.39
+1956,London,8.87
+1957,London,10.26
+1958,London,9.66
+1959,London,10.63
+1960,London,9.88
+1961,London,10.20
+1962,London,8.65
+1963,London,8.48
+1964,London,9.53
+1965,London,9.03
+1966,London,9.59
+1967,London,9.81
+1968,London,9.48
+1969,London,9.47
+1970,London,9.69
+1971,London,9.89
+1972,London,9.41
+1973,London,9.75
+1974,London,9.70
+1975,London,9.99
+1976,London,10.28
+1977,London,9.69
+1978,London,9.41
+1979,London,9.06
+1980,London,9.54
+1981,London,9.38
+1982,London,10.07
+1983,London,10.12
+1984,London,9.75
+1985,London,9.00
+1986,London,8.94
+1987,London,9.22
+1988,London,9.82
+1989,London,10.76
+1990,London,10.94
+1991,London,9.67
+1992,London,10.15
+1993,London,9.69
+1994,London,10.48
+1995,London,10.55
+1996,London,9.27
+1997,London,10.64
+1998,London,10.40
+1999,London,10.86
+2000,London,10.52
+2001,London,10.18
+2002,London,10.91
+2003,London,10.81
+2004,London,10.77
+2005,London,10.63
+2006,London,11.10
+2007,London,10.83
+2008,London,10.38
+2009,London,10.52
+2010,London,9.38
+2011,London,11.19
+2012,London,10.00
+2013,London,9.91
+1900,Los Angeles,16.08
+1901,Los Angeles,15.72
+1902,Los Angeles,15.08
+1903,Los Angeles,15.49
+1904,Los Angeles,16.24
+1905,Los Angeles,15.52
+1906,Los Angeles,15.74
+1907,Los Angeles,15.46
+1908,Los Angeles,15.17
+1909,Los Angeles,15.01
+1910,Los Angeles,15.94
+1911,Los Angeles,14.82
+1912,Los Angeles,14.84
+1913,Los Angeles,15.20
+1914,Los Angeles,15.65
+1915,Los Angeles,15.43
+1916,Los Angeles,14.60
+1917,Los Angeles,15.59
+1918,Los Angeles,15.65
+1919,Los Angeles,15.34
+1920,Los Angeles,15.06
+1921,Los Angeles,15.76
+1922,Los Angeles,15.31
+1923,Los Angeles,15.39
+1924,Los Angeles,15.69
+1925,Los Angeles,15.72
+1926,Los Angeles,16.60
+1927,Los Angeles,15.41
+1928,Los Angeles,15.98
+1929,Los Angeles,16.10
+1930,Los Angeles,15.99
+1931,Los Angeles,16.60
+1932,Los Angeles,15.40
+1933,Los Angeles,15.40
+1934,Los Angeles,17.03
+1935,Los Angeles,15.50
+1936,Los Angeles,16.60
+1937,Los Angeles,15.68
+1938,Los Angeles,15.89
+1939,Los Angeles,16.30
+1940,Los Angeles,16.53
+1941,Los Angeles,15.62
+1942,Los Angeles,15.77
+1943,Los Angeles,16.12
+1944,Los Angeles,15.03
+1945,Los Angeles,15.70
+1946,Los Angeles,15.65
+1947,Los Angeles,15.98
+1948,Los Angeles,15.09
+1949,Los Angeles,15.36
+1950,Los Angeles,16.20
+1951,Los Angeles,15.76
+1952,Los Angeles,15.33
+1953,Los Angeles,15.68
+1954,Los Angeles,16.05
+1955,Los Angeles,15.34
+1956,Los Angeles,15.70
+1957,Los Angeles,15.80
+1958,Los Angeles,16.70
+1959,Los Angeles,17.05
+1960,Los Angeles,16.31
+1961,Los Angeles,16.21
+1962,Los Angeles,15.62
+1963,Los Angeles,15.73
+1964,Los Angeles,15.28
+1965,Los Angeles,15.34
+1966,Los Angeles,15.99
+1967,Los Angeles,15.92
+1968,Los Angeles,15.89
+1969,Los Angeles,15.79
+1970,Los Angeles,16.00
+1971,Los Angeles,15.26
+1972,Los Angeles,15.96
+1973,Los Angeles,15.51
+1974,Los Angeles,15.85
+1975,Los Angeles,15.12
+1976,Los Angeles,16.18
+1977,Los Angeles,16.26
+1978,Los Angeles,16.01
+1979,Los Angeles,15.88
+1980,Los Angeles,16.23
+1981,Los Angeles,16.89
+1982,Los Angeles,15.44
+1983,Los Angeles,16.20
+1984,Los Angeles,16.76
+1985,Los Angeles,15.96
+1986,Los Angeles,16.50
+1987,Los Angeles,16.09
+1988,Los Angeles,16.44
+1989,Los Angeles,16.36
+1990,Los Angeles,16.37
+1991,Los Angeles,16.00
+1992,Los Angeles,16.79
+1993,Los Angeles,16.36
+1994,Los Angeles,16.29
+1995,Los Angeles,16.64
+1996,Los Angeles,17.08
+1997,Los Angeles,16.93
+1998,Los Angeles,15.37
+1999,Los Angeles,16.12
+2000,Los Angeles,16.64
+2001,Los Angeles,16.47
+2002,Los Angeles,16.43
+2003,Los Angeles,16.94
+2004,Los Angeles,16.55
+2005,Los Angeles,16.43
+2006,Los Angeles,16.62
+2007,Los Angeles,16.70
+2008,Los Angeles,17.01
+2009,Los Angeles,16.68
+2010,Los Angeles,15.89
+2011,Los Angeles,15.87
+2012,Los Angeles,17.09
+2013,Los Angeles,18.12
+1900,Moscow,3.27
+1901,Moscow,4.57
+1902,Moscow,2.67
+1903,Moscow,5.24
+1904,Moscow,3.31
+1905,Moscow,4.54
+1906,Moscow,5.06
+1907,Moscow,2.39
+1908,Moscow,2.56
+1909,Moscow,3.76
+1910,Moscow,5.03
+1911,Moscow,3.39
+1912,Moscow,3.14
+1913,Moscow,4.82
+1914,Moscow,4.57
+1915,Moscow,3.52
+1916,Moscow,4.07
+1917,Moscow,3.28
+1918,Moscow,4.05
+1919,Moscow,3.19
+1920,Moscow,4.64
+1921,Moscow,4.33
+1922,Moscow,4.01
+1923,Moscow,3.94
+1924,Moscow,3.67
+1925,Moscow,5.39
+1926,Moscow,3.37
+1927,Moscow,3.50
+1928,Moscow,3.30
+1929,Moscow,3.01
+1930,Moscow,4.55
+1931,Moscow,3.28
+1932,Moscow,5.10
+1933,Moscow,2.72
+1934,Moscow,5.26
+1935,Moscow,4.56
+1936,Moscow,5.36
+1937,Moscow,5.16
+1938,Moscow,5.92
+1939,Moscow,4.63
+1940,Moscow,3.16
+1941,Moscow,1.67
+1942,Moscow,2.09
+1943,Moscow,4.63
+1944,Moscow,4.76
+1945,Moscow,2.94
+1946,Moscow,4.09
+1947,Moscow,3.77
+1948,Moscow,4.78
+1949,Moscow,5.27
+1950,Moscow,3.93
+1951,Moscow,3.99
+1952,Moscow,4.21
+1953,Moscow,4.00
+1954,Moscow,4.04
+1955,Moscow,3.71
+1956,Moscow,2.45
+1957,Moscow,5.38
+1958,Moscow,3.89
+1959,Moscow,4.30
+1960,Moscow,4.50
+1961,Moscow,5.28
+1962,Moscow,4.54
+1963,Moscow,3.17
+1964,Moscow,4.42
+1965,Moscow,3.35
+1966,Moscow,4.81
+1967,Moscow,4.55
+1968,Moscow,3.58
+1969,Moscow,2.47
+1970,Moscow,4.27
+1971,Moscow,4.37
+1972,Moscow,5.27
+1973,Moscow,4.48
+1974,Moscow,5.45
+1975,Moscow,6.01
+1976,Moscow,2.65
+1977,Moscow,4.43
+1978,Moscow,3.21
+1979,Moscow,4.37
+1980,Moscow,3.41
+1981,Moscow,5.67
+1982,Moscow,4.75
+1983,Moscow,5.65
+1984,Moscow,4.42
+1985,Moscow,3.30
+1986,Moscow,4.19
+1987,Moscow,2.49
+1988,Moscow,4.89
+1989,Moscow,6.63
+1990,Moscow,5.81
+1991,Moscow,5.62
+1992,Moscow,5.36
+1993,Moscow,4.15
+1994,Moscow,4.13
+1995,Moscow,5.88
+1996,Moscow,4.55
+1997,Moscow,4.56
+1998,Moscow,4.47
+1999,Moscow,5.94
+2000,Moscow,5.96
+2001,Moscow,5.32
+2002,Moscow,5.63
+2003,Moscow,4.99
+2004,Moscow,5.32
+2005,Moscow,5.54
+2006,Moscow,4.91
+2007,Moscow,6.43
+2008,Moscow,6.76
+2009,Moscow,5.69
+2010,Moscow,5.91
+2011,Moscow,6.01
+2012,Moscow,5.20
+2013,Moscow,6.80
