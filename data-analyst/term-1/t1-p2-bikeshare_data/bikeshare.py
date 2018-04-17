@@ -1,7 +1,7 @@
 import time
 import pandas as pd
 import numpy as np
-from datetime import datetime
+from datetime import datetime, timedelta
 import sys
 from termcolor import colored, cprint
 import os
@@ -43,6 +43,9 @@ def readable_hour(n):
     suffix = 'pm' if n >= 12 else 'am'
     return str(n%12) + suffix
 
+# ordinal value taken from: https://stackoverflow.com/questions/9647202/ordinal-numbers-replacement
+ordinal = lambda n: "%d%s" % (n,"tsnrhtdd"[(n/10%10!=1)*(n%10<4)*n%10::4])
+
 def get_filters():
     """
     Asks user to specify a city, month, and day to analyze.
@@ -56,6 +59,8 @@ def get_filters():
     cprint('*'*len(greeting), 'white', 'on_cyan')
     cprint(greeting, 'white', 'on_cyan', attrs=['bold'])
     cprint('*'*len(greeting), 'white', 'on_cyan')
+    cprint('\n\n')
+    cprint('Note, you may need to install some 3rd party packages for this program to work.', 'white', 'on_red')
     cprint('\n\n')
 
     # get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
@@ -173,18 +178,28 @@ def station_stats(df):
     df['Start End'] = df['Start Station'] + ' --> ' + df['End Station']
     top_start_end_stations = df['Start End'].value_counts().keys().tolist()[:5]
     top_start_end_counts = df['Start End'].value_counts().tolist()[:5]
-    top_start_end = zip(top_start_stations, top_start_counts)
-    print(df.head())
 
     # display most commonly used start station
-    for station, count in top_start:
-        print('The next station is: ', station, count)
+    cprint('The most popular start stations:', 'white')
+    for i, (station, count) in enumerate(top_start):
+        rank = ordinal(i+1)
+        text = 'The {0}-most popular start station is {1} with {2} riders.'.format(rank, station, '{:,}'.format(count))
+        cprint(text + '\n', 'cyan', attrs=['bold'])
 
     # display most commonly used end station
-
+    cprint('The most popular end stations:', 'white')
+    for i, (station, count) in enumerate(top_end):
+        rank = ordinal(i+1)
+        text = 'The {0}-most popular end station is {1} with {2} riders.'.format(rank, station, '{:,}'.format(count))
+        cprint(text + '\n', 'cyan', attrs=['bold'])
 
     # display most frequent combination of start station and end station trip
-
+    top_route_start = top_start_end_stations[0].split(' --> ')[0]
+    top_route_end = top_start_end_stations[0].split(' --> ')[1]
+    top_route_count = top_start_end_counts[0]
+    text = 'The the most popular route was {0} to {1} with {2} riders.'.format(top_route_start, top_route_end, '{:,}'.format(top_start_end_counts[0]))
+    cprint('The most popular route:', 'white')
+    cprint(text + '\n', 'cyan', attrs=['bold'])
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
@@ -196,13 +211,25 @@ def trip_duration_stats(df):
     print('\nCalculating Trip Duration...\n')
     start_time = time.time()
 
-    total_travel_time = df['Trip Duration'].sum()
-    mean_travel_time = df['Trip Duration'].mean()
-    # display total travel time
+    total_travel_time = str(timedelta(seconds=float(df['Trip Duration'].sum())))
+    total_travel_time_days = total_travel_time.split(', ')[0]
+    total_travel_time_hr = total_travel_time.split(', ')[1].split(':')[0]
+    total_travel_time_min = total_travel_time.split(', ')[1].split(':')[1]
+    total_travel_time_sec = total_travel_time.split(', ')[1].split(':')[2]
 
+    mean_travel_time = str(timedelta(seconds=float(df['Trip Duration'].mean())))
+    mean_travel_time_hr = mean_travel_time.split(':')[0]
+    mean_travel_time_min = mean_travel_time.split(':')[1]
+    mean_travel_time_sec = mean_travel_time.split(':')[2]
+    # display total travel time
+    cprint('Total travel time for all riders:', 'white')
+    text = '{0} days, {1} hours, {2} minutes, and {3} seconds.'.format(str(total_travel_time_days), str(total_travel_time_hr), str(total_travel_time_min), str(total_travel_time_sec))
+    cprint(text + '\n', 'cyan', attrs=['bold'])
 
     # display mean travel time
-
+    cprint('Mean travel time for all riders:', 'white')
+    text = '{0} hours, {1} minutes, and {2} seconds.'.format(str(mean_travel_time_hr), str(mean_travel_time_min), str(mean_travel_time_sec))
+    cprint(text + '\n', 'cyan', attrs=['bold'])
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
@@ -214,23 +241,47 @@ def user_stats(df):
     print('\nCalculating User Stats...\n')
     start_time = time.time()
 
-    t1 = df['User Type'].value_counts()
-    t2 = df['Gender'].value_counts()
-    count_user_types = df['User Type'].notnull().value_counts()
-    count_gender = df['Gender'].notnull().value_counts()
-    count_dob = df['Birth Year'].notnull().value_counts()
-    count_dob_common = df['Birth Year'].notnull().value_counts().mode()
-    count_dob_youngest = df['Birth Year'].notnull().max()
-    count_dob_oldest = df['Birth Year'].notnull().max()
 
     # Display counts of user types
-
+    user_types = df['User Type'].value_counts().keys().tolist()[:5]
+    user_types_count = df['User Type'].value_counts().tolist()[:5]
+    top_user_types = zip(user_types, user_types_count)
+    cprint('Riders by type:\n', 'white')
+    for i, (t, count) in enumerate(top_user_types):
+        rank = ordinal(i+1)
+        text = 'The {0}-most common user type is {1} with {2} riders.'.format(rank, t, '{:,}'.format(count))
+        cprint(text + '\n', 'cyan', attrs=['bold'])
 
     # Display counts of gender
-
+    if 'Gender' in df:
+        gender_types = df['Gender'].value_counts().keys().tolist()[:5]
+        gender_types_count = df['Gender'].value_counts().tolist()[:5]
+        top_gender_types = zip(gender_types, gender_types_count)
+        cprint('Riders by gender:\n', 'white')
+        for i, (t, count) in enumerate(top_gender_types):
+            rank = ordinal(i+1)
+            text = 'The {0}-most common gender is {1} with {2} riders.'.format(rank, t, '{:,}'.format(count))
+            cprint(text + '\n', 'cyan', attrs=['bold'])
+    else:
+        cprint('Gender data not available for this city.\n', 'white')
 
     # Display earliest, most recent, and most common year of birth
+    if 'Birth Year' in df:
+        cprint('Riders by age:\n', 'white')
 
+        dob_common = int(df['Birth Year'].mode())
+        text = 'Born in {0} the most common rider age is {1}'.format(str(dob_common), str(datetime.now().year - dob_common))
+        cprint(text + '\n', 'cyan', attrs=['bold'])
+
+        dob_youngest = int(df['Birth Year'].max())
+        text = 'Born in {0} the youngest rider age is {1}'.format(str(dob_youngest), str(datetime.now().year - dob_youngest))
+        cprint(text + '\n', 'cyan', attrs=['bold'])
+
+        dob_oldest = int(df['Birth Year'].min())
+        text = 'Born in {0} the oldest rider age is {1}'.format(str(dob_oldest), str(datetime.now().year - dob_oldest))
+        cprint(text + '\n', 'cyan', attrs=['bold'])
+    else:
+        cprint('Age data not available for this city.\n', 'white')
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
@@ -242,9 +293,9 @@ def main():
         df = load_data(city, month, day)
         print(df.head(5))
         time_stats(df)
-        # station_stats(df)
-        # trip_duration_stats(df)
-        # user_stats(df)
+        station_stats(df)
+        trip_duration_stats(df)
+        user_stats(df)
 
         restart = input('\nWould you like to restart? Enter yes or no.\n')
         if restart.lower() != 'yes':
