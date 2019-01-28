@@ -3,11 +3,11 @@
 ## Install
 
 With `conda`:
-```python
+```bash
 conda install --yes --file requirements.txt
 ```
 
 ## Run
-```python
+```bash
 python bikeshare.py
 ```
